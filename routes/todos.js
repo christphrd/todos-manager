@@ -4,7 +4,6 @@ var model = require('../models/index');
 
 //GET todo list
 router.get('/', function (req, res, next) {
-    // res.send('respond with a resource');
     model.Todo.findAll({})
       .then(todos => res.json({
           error: false,
